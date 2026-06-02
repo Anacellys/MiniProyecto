@@ -1,4 +1,4 @@
-# 📚 Talleres Desarrollo Web VII - Universidad Tecnológica de Panamá
+# Mini Pryecto - Desarrollo Software VII 
 
 ## Descripción del Proyecto
 
@@ -10,7 +10,7 @@ Este proyecto implementa **4 problemas de desarrollo web** utilizando **PHP 8 pu
 
 ```
 MiniProyec/
-├── index.php                          # Front Controller - Punto de entrada
+├── index.php                         
 ├── app/
 │   ├── Autoloader.php                # Autocarga de clases PSR-4
 │   ├── controllers/
