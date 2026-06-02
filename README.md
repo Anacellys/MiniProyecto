@@ -183,60 +183,6 @@ public static function verifyCsrfToken(string $token): bool { ... }
 
 ---
 
-### 4. **Nomenclatura PSR-1**
-
-#### ✅ **Clases en StudlyCaps**
-```php
-class StatisticsModel    // ✓ Correcto
-class ValidationUtility  // ✓ Correcto
-class Problem1Controller // ✓ Correcto
-```
-
-#### ✅ **Métodos en camelCase**
-```php
-public function calculateMean()       // ✓ Correcto
-public function getStandardDeviation() // ✓ Correcto
-public function setNumbers()          // ✓ Correcto
-```
-
-#### ✅ **Variables en camelCase**
-```php
-$formData        // ✓ Correcto
-$errors          // ✓ Correcto
-$numberOfItems   // ✓ Correcto
-```
-
-#### ✅ **Constantes en UPPER_CASE**
-```php
-define('BASE_PATH', __DIR__ . DIRECTORY_SEPARATOR);
-define('APP_PATH', BASE_PATH . 'app' . DIRECTORY_SEPARATOR);
-```
-
----
-
-### 5. **Programación Orientada a Objetos (POO)**
-
-#### ✅ **Encapsulación**
-```php
-private array $numbers = [];
-
-public function setNumbers(array $numbers): void { ... }
-public function getNumbers(): array { ... }
-```
-
-#### ✅ **Métodos de Instancia**
-```php
-$model = new StatisticsModel($numbers);
-$mean = $model->getMean();
-$stdDev = $model->getStandardDeviation();
-```
-
-#### ✅ **Métodos Estáticos**
-```php
-$isValid = ValidationUtility::isPositiveNumber($value);
-$sanitized = SecurityUtility::sanitizeOutput($userInput);
-$mean = MathUtility::calculateMean($array);
-```
 
 ---
 
@@ -268,46 +214,6 @@ $mean = MathUtility::calculateMean($array);
 
 ---
 
-## 🚀 Cómo Ejecutar
-
-### **Requisitos**
-- WAMP64 Server (o equivalente)
-- PHP 8.0 o superior
-- Navegador web moderno
-
-### **Instalación**
-
-1. **Copiar archivos a WAMP**
-   ```bash
-   C:\wamp64\www\MiniProyec\
-   ```
-
-2. **Iniciar WAMP Server**
-   - Hacer clic en el ícono de WAMP en la bandeja del sistema
-
-3. **Abrir navegador**
-   ```
-   http://localhost/MiniProyec/
-   ```
-
-4. **Seleccionar un problema del menú principal**
-
----
-
-## 📝 Características Principales
-
-✅ **PHP 8 Puro** - Sin dependencias externas
-✅ **Patrón MVC** - Separación clara de responsabilidades
-✅ **DRY Principle** - Reutilización de código
-✅ **OWASP Security** - Protección XSS + validación
-✅ **Bootstrap 5** - Diseño responsivo
-✅ **Métodos Estáticos** - Utilities reutilizables
-✅ **PSR-1 Compliance** - Convenciones de código
-✅ **Autoloader PSR-4** - Carga automática de clases
-✅ **Fecha Dinámica** - En el footer
-✅ **Comentarios Académicos** - Documentación clara
-
----
 
 ## 🔐 Seguridad Implementada
 
@@ -377,14 +283,10 @@ for ($i = $this->start; $i <= $this->end; $i++) {
 
 ---
 
-## 📞 Contacto y Autor
+## 📞  Autores 
 
 **Universidad Tecnológica de Panamá**
-Desarrollo Web VII - Taller de Proyectos
+Anacelis Boniche 
 
----
 
-## 📄 Licencia
-
-Proyecto educativo - Uso libre para propósitos académicos.
 
