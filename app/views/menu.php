@@ -30,12 +30,44 @@ include VIEWS_PATH . 'header.php';
         <a href="?action=problem3">Resolver</a>
     </div>
 
-   
     <div class="menu-card">
         <h4>Problema #4</h4>
         <p>Calcula la suma de números pares e impares comprendidos entre 1 y 200.</p>
         <a href="?action=problem4">Resolver</a>
     </div>
+
+    <div class="menu-card">
+        <h4>Problema #5</h4>
+        <p>Determina la estación del año según el día y mes ingresados.</p>
+        <a href="?action=problem5">Resolver</a>
+    </div>
+
+    <div class="menu-card">
+        <h4>Problema #6</h4>
+        <p>Clasifica edades y muestra estadísticas con gráfica.</p>
+        <a href="?action=problem6">Resolver</a>
+    </div>
+
+    <div class="menu-card">
+        <h4>Problema #7</h4>
+        <p>Distribución del presupuesto hospitalario con gráfica.</p>
+        <a href="?action=problem7">Resolver</a>
+    </div>
+
+    <div class="menu-card">
+        <h4>Problema #8</h4>
+        <p>Calcula media, desviación estándar, mínimo y máximo con gráfica.</p>
+        <a href="?action=problem8">Resolver</a>
+    </div>
+
+    <div class="menu-card">
+        <h4>Problema #9</h4>
+        <p>Calcula las 15 primeras potencias de un número.</p>
+        <a href="?action=problem9">Resolver</a>
+    </div>
+
 </div>
 
+
 <?php include VIEWS_PATH . 'footer.php'; ?>
+

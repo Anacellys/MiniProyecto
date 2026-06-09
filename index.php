@@ -45,10 +45,43 @@ switch ($action) {
         $controller = new \App\Controllers\Problem4Controller();
         $controller->handle();
         break;
+     
+    case 'problem5':
+        require_once CONTROLLERS_PATH . 'Problem5Controller.php';
+        $controller = new \App\Controllers\Problem5Controller();
+        $controller->handle();
+        break;
+
+    case 'problem6':
+        require_once CONTROLLERS_PATH . 'Problem6Controller.php';
+        $controller = new \App\Controllers\Problem6Controller();
+        $controller->handle();
+        break;
+
+    case 'problem7':
+        require_once CONTROLLERS_PATH . 'Problem7Controller.php';
+        $controller = new \App\Controllers\Problem7Controller();
+        $controller->handle();
+        break;
+
+    case 'problem8':
+        require_once CONTROLLERS_PATH . 'Problem8Controller.php';
+        $controller = new \App\Controllers\Problem8Controller();
+        $controller->handle();
+        break;
+
+    case 'problem9':
+        require_once CONTROLLERS_PATH . 'Problem9Controller.php';
+        $controller = new \App\Controllers\Problem9Controller();
+        $controller->handle();
+        break;
 
     case 'menu':
+
+
     default:
         require_once VIEWS_PATH . 'menu.php';
         break;
 }
 ?>
+
