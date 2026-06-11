@@ -3,8 +3,7 @@
  * Vista resultado del Problema #2
  * Muestra la suma de 1 al 1000 con procedimiento
  *
- * @author Desarrollador Senior PHP
- * @version 1.0
+ * 
  */
 
 use App\Utilities\SecurityUtility;

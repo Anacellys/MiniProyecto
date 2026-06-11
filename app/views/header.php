@@ -4,8 +4,6 @@
  * Reutilizable en todas las vistas
  * Incluye Bootstrap 5 y estilos personalizados
  *
- * @author Desarrollador Senior PHP
- * @version 1.0
  */
 ?>
 <!DOCTYPE html>

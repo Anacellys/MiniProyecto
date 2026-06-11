@@ -3,8 +3,7 @@
  * Vista resultado del Problema #4
  * Suma de números pares e impares del 1 al 200
  *
- * @author Desarrollador Senior PHP
- * @version 1.0
+
  */
 
 use App\Utilities\SecurityUtility;

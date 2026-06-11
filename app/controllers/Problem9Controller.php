@@ -53,7 +53,7 @@ class Problem9Controller
         $model = new PowersModel($n);
         $info = $model->getPowersInfo(self::POWERS_COUNT);
 
-        // Ajustar labels correctamente según base
+    
         $labels = [];
         foreach ($info['powers'] as $idx => $_value) {
             $exp = $idx + 1;

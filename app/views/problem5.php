@@ -88,19 +88,19 @@ $csrfToken = SecurityUtility::generateCsrfToken();
                     $imgSrc = '';
                     switch ($seasonKey) {
                         case \App\Models\SeasonModel::SEASON_WINTER:
-                            $imgSrc = 'https://images.unsplash.com/photo-1524404695749-7a4d6f1f0f9a?auto=format&fit=crop&w=900&q=60';
+                            $imgSrc = 'public/recursos/estaciones/invierno.jpg';
                             break;
                         case \App\Models\SeasonModel::SEASON_SUMMER:
-                            $imgSrc = 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=60';
+                            $imgSrc = 'public/recursos/estaciones/verano.jpg';
                             break;
                         case \App\Models\SeasonModel::SEASON_SPRING:
-                            $imgSrc = 'https://images.unsplash.com/photo-1496307653780-42ee777d4833?auto=format&fit=crop&w=900&q=60';
+                            $imgSrc = 'public/recursos/estaciones/primavera.jpg';
                             break;
                         case \App\Models\SeasonModel::SEASON_AUTUMN:
-                            $imgSrc = 'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=60';
+                            $imgSrc = 'public/recursos/estaciones/otono.jpg';
                             break;
                         default:
-                            $imgSrc = 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=60';
+                            $imgSrc = 'public/recursos/estaciones/primavera.jpg';
                             break;
                     }
                 ?>
