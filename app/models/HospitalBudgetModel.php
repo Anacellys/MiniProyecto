@@ -12,54 +12,61 @@ class HospitalBudgetModel
     public const AREA_TRAUMATOLOGY = 'Traumatología';
     public const AREA_PEDIATRICS = 'Pediatría';
 
-    private const BUDGETS = [
-        self::AREA_GYNECOLOGY => 8000.00,
-        self::AREA_TRAUMATOLOGY => 7000.00,
-        self::AREA_PEDIATRICS => 5000.00,
+    /**
+     * Porcentajes fijos del problema.
+     */
+    private const PERCENTAGES = [
+        self::AREA_GYNECOLOGY => 40.0,
+        self::AREA_TRAUMATOLOGY => 35.0,
+        self::AREA_PEDIATRICS => 25.0,
     ];
 
     public function getAreas(): array
     {
-        return array_keys(self::BUDGETS);
+        return array_keys(self::PERCENTAGES);
     }
 
-    public function getBudgetByArea(string $area): ?float
+    /**
+     * Calcula la distribución del presupuesto en base al total ingresado.
+     *
+     * @param float $totalBudget Presupuesto total (debe ser > 0 desde el controlador).
+     * @return array{total: float, budgets: array<string,float>, percentages: array<string,float>}
+     */
+    public function calculateDistribution(float $totalBudget): array
     {
-        return self::BUDGETS[$area] ?? null;
-    }
+        $budgets = [];
+        $percentages = self::PERCENTAGES;
 
-    public function getDistributionInfo(): array
-    {
-        $budgets = self::BUDGETS;
-        $total = 0.0;
-        foreach ($budgets as $value) {
-            $total += (float)$value;
-        }
-
-        $percentages = [];
-        foreach ($budgets as $area => $value) {
-            $percentages[$area] = $total > 0 ? ((float)$value / $total) * 100 : 0.0;
+        foreach (self::PERCENTAGES as $area => $percentage) {
+            $budgets[$area] = ((float)$percentage / 100.0) * (float)$totalBudget;
         }
 
         return [
+            'total' => (float)$totalBudget,
             'budgets' => $budgets,
-            'total' => $total,
             'percentages' => $percentages,
         ];
     }
 
-    public function getChartData(array $distributionInfo): array
+    /**
+     * Prepara datos para Chart.js a partir de una distribución calculada.
+     *
+     * @param array $distribution Distribución calculada por calculateDistribution().
+     * @return array{chartLabels: array<int,string>, chartData: array<int,float>, chartColors: array<int,string>}
+     */
+    public function getChartDataFromDistribution(array $distribution): array
     {
         $labels = [];
         $data = [];
         $backgroundColors = [];
 
-        $colorPrimary = 'rgba(22, 163, 74, 0.80)'; // #16a34a
+        $colorPrimary = 'rgba(22, 163, 74, 0.80)';
         $colorSecondary = 'rgba(46, 204, 113, 0.85)';
         $colorAccent = 'rgba(39, 174, 96, 0.85)';
 
-        foreach ($distributionInfo['budgets'] as $area => $budget) {
-            $labels[] = $area;
+        $budgets = $distribution['budgets'] ?? [];
+        foreach ($budgets as $area => $budget) {
+            $labels[] = (string)$area;
             $data[] = (float)$budget;
 
             if ($area === self::AREA_GYNECOLOGY) {
@@ -79,4 +86,6 @@ class HospitalBudgetModel
     }
 }
 ?>
+
+
 
